@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "SpFileDatabase",
+	"category" : "TrackingNumbers-Persistence",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "TnTrackingNumberDB",
+	"type" : "normal"
+}

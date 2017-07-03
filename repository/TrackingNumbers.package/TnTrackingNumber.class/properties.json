@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "Object",
+	"category" : "TrackingNumbers",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"DB"
+	],
+	"instvars" : [
+		"number"
+	],
+	"name" : "TnTrackingNumber",
+	"type" : "normal"
+}
