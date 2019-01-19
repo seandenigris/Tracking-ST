@@ -6,6 +6,8 @@ baseline: spec
 		spec 
 			baseline: 'SimplePersistence' with: [ 
 				spec repository: 'github://seandenigris/Simple-Persistence:master/repository' ];
+			baseline: 'ExternalWebBrowser' with: [
+				spec repository: 'github://seandenigris/Pharo-Web-Browser:master/repository' ];
 			package: #'TrackingNumbers'  with: [
 				spec
-					requires: #'SimplePersistence'. ] ]
+					requires: #( #'SimplePersistence' #'ExternalWebBrowser'). ] ]
