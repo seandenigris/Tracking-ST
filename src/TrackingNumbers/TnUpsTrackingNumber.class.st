@@ -1,8 +1,15 @@
 Class {
 	#name : #TnUpsTrackingNumber,
 	#superclass : #TnTrackingNumber,
-	#category : #TrackingNumbers
+	#category : #'TrackingNumbers-Core'
 }
+
+{ #category : #testing }
+TnUpsTrackingNumber class >> isClassFor: aString [
+	"https://en.wikipedia.org/wiki/Tracking_number"
+	
+	^ aString size = 18 and: [ aString beginsWith: aString ]
+]
 
 { #category : #accessing }
 TnUpsTrackingNumber >> printOn: aStream [

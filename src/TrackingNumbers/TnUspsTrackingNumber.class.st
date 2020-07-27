@@ -1,8 +1,15 @@
 Class {
 	#name : #TnUspsTrackingNumber,
 	#superclass : #TnTrackingNumber,
-	#category : #TrackingNumbers
+	#category : #'TrackingNumbers-Core'
 }
+
+{ #category : #testing }
+TnUspsTrackingNumber class >> isClassFor: aString [
+	"https://en.wikipedia.org/wiki/Tracking_number"
+	
+	^ aString size = 30 and: [ aString allSatisfy: #isDigit ]
+]
 
 { #category : #accessing }
 TnUspsTrackingNumber >> printOn: aStream [

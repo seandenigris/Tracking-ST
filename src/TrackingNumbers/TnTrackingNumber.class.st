@@ -2,12 +2,13 @@ Class {
 	#name : #TnTrackingNumber,
 	#superclass : #Object,
 	#instVars : [
-		'number'
+		'number',
+		'description'
 	],
 	#classVars : [
 		'DB'
 	],
-	#category : #TrackingNumbers
+	#category : #'TrackingNumbers-Core'
 }
 
 { #category : #convenience }
@@ -25,6 +26,15 @@ TnTrackingNumber class >> db [
 TnTrackingNumber class >> db: aCollection [
 
 	DB := aCollection.
+]
+
+{ #category : #'instance creation' }
+TnTrackingNumber class >> fromString: aString [
+	| subclass |
+	subclass := self subclasses detect: [ :e | e isClassFor: aString ].
+	^ subclass new
+			number: aString;
+			yourself
 ]
 
 { #category : #accessing }
