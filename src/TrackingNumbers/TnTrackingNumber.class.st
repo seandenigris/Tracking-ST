@@ -13,7 +13,7 @@ Class {
 
 { #category : #convenience }
 TnTrackingNumber class >> add: trackingNumber [
-	^ self db add: trackingNumber
+	^ self db add: trackingNumber asTnTrackingNumber
 ]
 
 { #category : #accessing }
@@ -37,13 +37,6 @@ TnTrackingNumber class >> fromString: aString [
 			yourself
 ]
 
-{ #category : #accessing }
-TnTrackingNumber class >> number: aString [
-	^ self new
-			number: aString;
-			yourself
-]
-
 { #category : #persistence }
 TnTrackingNumber class >> restoreFrom: anObject [
 
@@ -54,6 +47,30 @@ TnTrackingNumber class >> restoreFrom: anObject [
 TnTrackingNumber class >> spData [
 
 	^ DB
+]
+
+{ #category : #converting }
+TnTrackingNumber >> asTnTrackingNumber [
+	^ self
+]
+
+{ #category : #accessing }
+TnTrackingNumber >> description [
+	^ self maLazyFrom: self descriptionDescription
+]
+
+{ #category : #accessing }
+TnTrackingNumber >> description: aString [
+	description := aString
+]
+
+{ #category : #'magritte-accessing' }
+TnTrackingNumber >> descriptionDescription [
+	<magritteDescription>
+	^ MAStringDescription new
+		accessor: #description;
+		priority: 200;
+		yourself
 ]
 
 { #category : #accessing }
@@ -68,6 +85,16 @@ TnTrackingNumber >> htmlLink [
 			#number -> self number } asDictionary
 ]
 
+{ #category : #'magritte-accessing' }
+TnTrackingNumber >> htmlLinkDescription [
+	<magritteDescription>
+	^ MAStringDescription new
+		accessor: #htmlLink;
+		readonly: true;
+		priority: 300;
+		yourself
+]
+
 { #category : #accessing }
 TnTrackingNumber >> number [
 	^ number
@@ -76,6 +103,15 @@ TnTrackingNumber >> number [
 { #category : #accessing }
 TnTrackingNumber >> number: anObject [
 	number := anObject
+]
+
+{ #category : #'magritte-accessing' }
+TnTrackingNumber >> numberDescription [
+	<magritteDescription>
+	^ MAStringDescription new
+		accessor: #number;
+		priority: 100;
+		yourself
 ]
 
 { #category : #accessing }
