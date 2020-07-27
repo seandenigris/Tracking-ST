@@ -10,18 +10,18 @@ Class {
 	#category : #TrackingNumbers
 }
 
-{ #category : #persistence }
+{ #category : #convenience }
 TnTrackingNumber class >> add: trackingNumber [
 	^ self db add: trackingNumber
 ]
 
-{ #category : #persistence }
+{ #category : #accessing }
 TnTrackingNumber class >> db [
 
 	^ DB ifNil: [ DB := OrderedCollection new ].
 ]
 
-{ #category : #persistence }
+{ #category : #accessing }
 TnTrackingNumber class >> db: aCollection [
 
 	DB := aCollection.
@@ -37,7 +37,13 @@ TnTrackingNumber class >> number: aString [
 { #category : #persistence }
 TnTrackingNumber class >> restoreFrom: anObject [
 
-	DB := anObject.
+	self db: anObject.
+]
+
+{ #category : #persistence }
+TnTrackingNumber class >> spData [
+
+	^ DB
 ]
 
 { #category : #accessing }
