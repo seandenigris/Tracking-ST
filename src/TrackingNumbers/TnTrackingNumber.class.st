@@ -90,7 +90,7 @@ TnTrackingNumber >> htmlLinkDescription [
 	<magritteDescription>
 	^ MAStringDescription new
 		accessor: #htmlLink;
-		readonly: true;
+		readOnly: true;
 		priority: 300;
 		yourself
 ]
