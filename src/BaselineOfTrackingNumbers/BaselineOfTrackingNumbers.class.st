@@ -4,6 +4,11 @@ Class {
 	#category : #BaselineOfTrackingNumbers
 }
 
+{ #category : #testing }
+BaselineOfTrackingNumbers class >> isDynabook [
+	^ true
+]
+
 { #category : #baselines }
 BaselineOfTrackingNumbers >> baseline: spec [
 	<baseline>
