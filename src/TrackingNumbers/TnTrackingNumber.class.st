@@ -56,7 +56,8 @@ TnTrackingNumber >> asTnTrackingNumber [
 
 { #category : #accessing }
 TnTrackingNumber >> description [
-	^ self maLazyFrom: self descriptionDescription
+
+	^ self maLazyInstVarUsing: self descriptionDescription
 ]
 
 { #category : #accessing }
