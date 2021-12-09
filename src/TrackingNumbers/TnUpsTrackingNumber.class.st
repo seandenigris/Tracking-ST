@@ -12,6 +12,21 @@ TnUpsTrackingNumber class >> isClassFor: aString [
 ]
 
 { #category : #accessing }
+TnUpsTrackingNumber >> browseStatus [
+	^ self url open
+]
+
+{ #category : #accessing }
+TnUpsTrackingNumber >> browseStatusDescription [
+	<magritteActionDescription>
+	^ MAActionDescription new
+		priority: 150;
+		gtIcon: BrGlamorousVectorIcons link;
+		action: #browseStatus;
+		yourself
+]
+
+{ #category : #accessing }
 TnUpsTrackingNumber >> printOn: aStream [
 	
 	self number doWithIndex: [ :e :i |
