@@ -55,6 +55,21 @@ TnTrackingNumber >> asTnTrackingNumber [
 ]
 
 { #category : #accessing }
+TnTrackingNumber >> browseStatus [
+	^ self url open
+]
+
+{ #category : #accessing }
+TnTrackingNumber >> browseStatusDescription [
+	<magritteActionDescription>
+	^ MAActionDescription new
+		priority: 150;
+		gtIcon: BrGlamorousVectorIcons link;
+		action: #browseStatus;
+		yourself
+]
+
+{ #category : #accessing }
 TnTrackingNumber >> description [
 
 	^ self maLazyInstVarUsing: self descriptionDescription

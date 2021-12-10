@@ -6,9 +6,9 @@ Class {
 
 { #category : #testing }
 TnUspsTrackingNumber class >> isClassFor: aString [
-	"https://en.wikipedia.org/wiki/Tracking_number"
+	"This only handles the most common cases. there are exceptions e.g. starting with EC"
 	
-	^ aString size = 30 and: [ aString allSatisfy: #isDigit ]
+	^ aString size = 22 and: [ aString first = $9 and: [ aString allSatisfy: #isDigit ] ]
 ]
 
 { #category : #accessing }
