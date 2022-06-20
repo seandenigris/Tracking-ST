@@ -1,0 +1,9 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'TrackingNumbers',
+      #directory : 'src',
+      #platforms : [ #pharo ]
+    }
+  ]
+}
