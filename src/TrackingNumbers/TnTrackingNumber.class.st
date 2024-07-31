@@ -1,6 +1,8 @@
 Class {
 	#name : #TnTrackingNumber,
 	#superclass : #Object,
+	#traits : 'DbTDomainObject',
+	#classTraits : 'DbTDomainObject classTrait',
 	#instVars : [
 		'number',
 		'description'
