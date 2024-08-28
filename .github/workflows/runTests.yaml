@@ -16,8 +16,6 @@ on:
 # Adapted from https://docs.github.com/en/actions/using-workflows/reusing-workflows
 jobs:
   test-and-release:
-    permissions:
-      contents: write
     uses: seandenigris/Pharo-Enhancements/.github/workflows/ci_reusable.yaml@master
     with:
       project-name: TrackingSt
