@@ -15,11 +15,11 @@ BaselineOfTrackingNumbers >> baseline: spec [
 
 	spec for: #'common' do: [
 		spec 
-			baseline: 'DynabookFoundation' with: [
+			baseline: #'DynabookFoundation' with: [
 				spec repository: 'github://seandenigris/Dynabook-Foundation' ];
-			baseline: 'ExternalWebBrowser' with: [
+			baseline: #'ExternalWebBrowser' with: [
 				spec repository: 'github://seandenigris/Pharo-Web-Browser:master/repository' ];
-			baseline: 'SimplePersistence' with: [ 
+			baseline: #'SimplePersistence' with: [ 
 				spec repository: 'github://seandenigris/Simple-Persistence:master/repository' ];
 			package: #'TrackingNumbers'  with: [
 				spec
