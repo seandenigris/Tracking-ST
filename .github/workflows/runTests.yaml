@@ -18,4 +18,4 @@ jobs:
   test-and-release:
     uses: seandenigris/Pharo-Enhancements/.github/workflows/ci_reusable.yaml@master
     with:
-      project-name: TrackingSt
+      project-name: TrackingST
