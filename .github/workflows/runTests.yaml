@@ -1,7 +1,3 @@
-## Adapted from:
-##    - Roassal3 - https://github.com/ObjectProfile/Roassal3/blob/36b92db2055501c87f2ccea5573fc83fb4916884/.github/workflows/runTests.yml
-##    - Willow-Playground - https://github.com/ba-st/Willow-Playground/blob/2898e1afbdd5a6011721e5a640225f81ae895de2/.github/workflows/build.yml0
-
 name: CI
 
 # Controls when the action will run. 
@@ -13,6 +9,16 @@ on:
     branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Adapted from https://docs.github.com/en/actions/using-workflows/reusing-workflows
+jobs:
+  test-and-release:
+    permissions:
+      contents: write
+    uses: seandenigris/Pharo-Enhancements/.github/workflows/ci_reusable.yaml@master
+    with:
+      project-name: {projectName}tab
   workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
